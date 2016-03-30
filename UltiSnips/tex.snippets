@@ -58,52 +58,66 @@ $0
 endsnippet
 
 snippet part "Part" b
-\part{${1:part name}}
+\part{${1:part name}} % {{{
 \label{prt:${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/ga}}}
 
 ${0}
+
+% part $2 }}}
 endsnippet
 
-snippet cha "Chapter" b
-\chapter{${1:chapter name}}
+snippet cha(pter)? "Chapter" b
+\chapter{${1:chapter name}} % {{{
 \label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% chapter $2 }}}
 endsnippet
 
-snippet sec "Section" b
-\section{${1:section name}}
+snippet sec(tion)? "Section" b
+\section{${1:section name}} % {{{
 \label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% section $2 }}}
 endsnippet
 
-snippet sub "Subsection" b
-\subsection{${1:subsection name}}
+snippet sub(section)? "Subsection" b
+\subsection{${1:subsection name}} % {{{
 \label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% subsection $2 }}}
 endsnippet
 
 snippet ssub "Subsubsection" b
-\subsubsection{${1:subsubsection name}}
+\subsubsection{${1:subsubsection name}} % {{{
 \label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% subsubsection $2 }}}
 endsnippet
 
 snippet par "Paragraph" b
-\paragraph{${1:paragraph name}}
+\paragraph{${1:paragraph name}} % {{{
 \label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% paragraph $2 }}}
 endsnippet
 
 snippet subp "Subparagraph" b
-\subparagraph{${1:subparagraph name}}
+\subparagraph{${1:subparagraph name}} % {{{
 \label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 ${0}
+
+% subparagraph $2 }}}
 endsnippet
 
 snippet ni "Non-indented paragraph" b
